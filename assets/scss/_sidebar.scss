@@ -1,0 +1,134 @@
+/** @format */
+
+.left-sidebar {
+  margin-bottom: $gap-xl;
+
+  .panel:last-of-type {
+    margin: 0;
+  }
+}
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow-x: hidden;
+  &__image {
+    width: 100%;
+  }
+}
+
+.user-login {
+  position: relative;
+  &__tabs {
+    position: absolute;
+    top: 0;
+    right: calc($gap / 3) * 2;
+    border: none;
+
+    a {
+      background-color: transparent !important;
+      border: none !important;
+      color: $color-gray;
+      padding: 14px 5px 11px !important;
+    }
+
+    .active a {
+      color: $color-white !important;
+    }
+  }
+}
+
+.site-news-item {
+  position: relative;
+  clear: both;
+
+  &:not(:last-child) {
+    min-height: 85px;
+    margin-bottom: $gap;
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+
+      content: "";
+      height: 1px;
+      width: calc(100% - 85px);
+      background-color: $color-gray;
+    }
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+
+    .site-news-item__thumbnail {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &__thumbnail {
+    float: left;
+    width: 75px;
+    margin: 0 (calc($gap / 3) * 2) (calc($gap / 3) * 2) 0;
+    transition: background-color 0.25s, border-color 0.25s;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @include block-shortener(1rem, 1.5, 50px, 2);
+    a {
+      transition: color 0.5s;
+    }
+  }
+
+  &__date {
+    text-align: right;
+    font-size: 0.8rem;
+    color: $color-gray-dark;
+  }
+}
+
+.top-films {
+  &__body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  &__list {
+    margin-bottom: 0;
+  }
+  &__item {
+    background-color: transparent;
+    margin-right: -1px;
+    margin-left: -1px;
+    padding-right: 55px;
+    color: $color-primary !important;
+
+    &:first-child {
+      border-radius: 0;
+      border-top: none;
+    }
+    &:last-child {
+      border-radius: 0;
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent !important;
+      color: $color-white !important;
+      border-color: $color-accent;
+
+      .badge {
+        background-color: $color-black;
+      }
+    }
+  }
+  &__badge {
+    position: absolute;
+    top: 50%;
+    right: $gap;
+    transform: translateY(-50%);
+  }
+}
