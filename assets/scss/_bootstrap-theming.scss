@@ -82,3 +82,8 @@
     font-size: 0.875rem;
   }
 }
+
+.thumbnail a > img,
+.thumbnail > img {
+  width: 100%;
+}
