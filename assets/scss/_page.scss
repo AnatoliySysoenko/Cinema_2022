@@ -1,0 +1,35 @@
+/** @format */
+
+.film-info {
+  font-size: 1.2em;
+
+  &__well {
+    border-radius: 0 0 4px 4px;
+  }
+
+  &__wrapper {
+    white-space: nowrap;
+
+    &:not(:last-of-type) {
+      margin-right: $gap;
+    }
+  }
+
+  &__badge {
+    font-size: 0.8em;
+  }
+}
+
+.embed-responsive {
+  border: 1px solid $color-gray;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.well {
+  border: 1px solid $color-gray;
+}
+
+.film-comment-form__button {
+  float: right;
+}
