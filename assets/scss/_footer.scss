@@ -1,0 +1,33 @@
+/** @format */
+
+.footer {
+  padding-top: $gap * 3;
+  background-color: $color-dark;
+  color: $color-gray;
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: $color-gray-dark;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  &-fifth {
+    margin: 20px 0;
+    text-align: center;
+
+    a {
+      color: $color-gray;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
